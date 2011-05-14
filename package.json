@@ -1,5 +1,5 @@
 { "name" : "yelp"
-, "description" : "Library for interacting with Yelp's API v2.0."
+, "description" : "Library for interfacing with Yelp's API v2.0."
 , "version" : "0.1.0"
 , "directories" : { "lib" : "./lib" }
 , "main" : "index.js"
