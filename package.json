@@ -10,4 +10,7 @@
   }
 , "repository" : { "type":"git", "url":"https://github.com/olalonde/node-yelp.git" }
 , "homepage" : "https://github.com/olalonde/node-yelp"
+, "dependencies": {
+    "oauth": ">=0.9.0 <1.0.0"
+  }
 }
