@@ -1,0 +1,13 @@
+{ "name" : "yelp"
+, "description" : "Library for interacting with Yelp's API v2.0."
+, "version" : "0.1.0"
+, "directories" : { "lib" : "./lib" }
+, "main" : "index.js"
+, "author" : { 
+    "name" : "Olivier Lalonde"
+    , "email" : "olalonde@gmail.com"
+    , "url" : "http://www.syskall.com/"
+  }
+, "repository" : { "type":"git", "url":"https://github.com/olalonde/node-yelp.git" }
+, "homepage" : "https://github.com/olalonde/node-yelp"
+}
