@@ -1,4 +1,4 @@
-var yelp = require("./yelp/index").createClient({
+var yelp = require("../index").createClient({
   consumer_key: "consumer-key", 
   consumer_secret: "consumer-secret",
   token: "token",
