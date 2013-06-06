@@ -1,3 +1,5 @@
+[![NPM version](https://badge.fury.io/js/yelp.png)](http://badge.fury.io/js/yelp)
+
 Node.js module for interfacing with [Yelp](http://www.yelp.com)'s API v2.0
 
 # Install #
