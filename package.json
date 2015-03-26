@@ -1,9 +1,9 @@
 { "name" : "yelp"
 , "description" : "Library for interfacing with Yelp's API v2.0."
-, "version" : "0.1.1"
+, "version" : "0.2.0"
 , "directories" : { "lib" : "./lib" }
 , "main" : "index.js"
-, "author" : { 
+, "author" : {
     "name" : "Olivier Lalonde"
     , "email" : "olalonde@gmail.com"
     , "url" : "http://www.syskall.com/"
