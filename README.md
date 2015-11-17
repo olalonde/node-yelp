@@ -1,42 +1,66 @@
-[![NPM version](https://badge.fury.io/js/yelp.png)](http://badge.fury.io/js/yelp)
+[![Build Status](https://travis-ci.org/olalonde/node-yelp.svg?branch=master)](https://travis-ci.org/olalonde/node-yelp) [![NPM version](https://badge.fury.io/js/yelp.png)](http://badge.fury.io/js/yelp)
 
-Node.js module for interfacing with [Yelp](http://www.yelp.com)'s API v2.0
+Node.js module for interfacing with [Yelp](http://www.yelp.com)'s API
+v2.0. Supports both promises and callbacks.
 
-# Install #
+# Install
 
-    npm install --save yelp
+```
+npm install --save yelp
+```
 
-# Usage #
+# Usage
 
 ```javascript
 // Request API access: http://www.yelp.com/developers/getting_started/api_access
+var Yelp = require('yelp');
 
-var yelp = require("yelp").createClient({
-  consumer_key: "consumer-key", 
-  consumer_secret: "consumer-secret",
-  token: "token",
-  token_secret: "token-secret"
+var yelp = new Yelp({
+  consumer_key: 'consumer-key',
+  consumer_secret: 'consumer-secret',
+  token: 'token',
+  token_secret: 'token-secret',
 });
 
 // See http://www.yelp.com/developers/documentation/v2/search_api
-yelp.search({term: "food", location: "Montreal"}, function(error, data) {
-  console.log(error);
+yelp.search({ term: 'food', location: 'Montreal' })
+.then(function (data) {
   console.log(data);
+})
+.catch(function (err) {
+  console.error(err);
 });
 
 // See http://www.yelp.com/developers/documentation/v2/business
-yelp.business("yelp-san-francisco", function(error, data) {
-  console.log(error);
+yelp.business('yelp-san-francisco')
+  .then(console.log)
+  .catch(console.error);
+
+yelp.phoneSearch({ phone: '+15555555555' })
+  .then(console.log)
+  .catch(console.error);
+
+// A callback based API is also available:
+yelp.business('yelp-san-francisco', function(err, data) {
+  if (err) return console.log(error);
   console.log(data);
 });
 ```
 
-# References #
+See [./test](./test) for more usage examples.
+
+# References
 
 - [Search API](http://www.yelp.com/developers/documentation/v2/search_api)
 - [Business API](http://www.yelp.com/developers/documentation/v2/business)
 
-# License #
+# Test
+
+```bash
+CONSUMER_KEY="" CONSUMER_SECRET="" TOKEN="" TOKEN_SECRET="" npm test
+```
+
+# License
 
 Copyright (c) 2012 Olivier Lalonde <olalonde@gmail.com>
 
