@@ -1,7 +1,7 @@
 {
   "name": "yelp",
   "description": "Library for interfacing with Yelp's API v2.0.",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "main": "./lib",
   "scripts": {
     "lint": "eslint ./src ./test",
