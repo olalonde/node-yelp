@@ -3,7 +3,7 @@ import oauth from 'oauth';
 
 const OAuth = oauth.OAuth;
 
-const baseUrl = 'http://api.yelp.com/v2/';
+const baseUrl = 'https://api.yelp.com/v2/';
 
 class Yelp {
   constructor(opts) {
